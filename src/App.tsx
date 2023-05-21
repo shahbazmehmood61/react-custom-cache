@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Comments from "./Pages/Comments";
+import Users from "./Pages/Users";
+import Posts from "./Pages/Posts";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Cached Virtualized Lists</h1>
+      <div style={{ display: "flex", width: "100%", justifyContent: "space-between" }}>
+        <Comments />
+        <Users />
+        <Posts />
+      </div>
+    </>
   );
-}
-
+};
 export default App;
